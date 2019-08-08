@@ -1,0 +1,90 @@
+﻿@model ProductCategoryApp.Models.ProductModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProductModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseValue)
+        </dd>
+        <dt>
+            diffrence
+        </dt>
+        <dd>
+            @(Model.CurrentValue - Model.PurchaseValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Length_X)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Length_X)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Length_Y)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Length_Y)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Length_Z)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Length_Z)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    <a asp-action="Index">Back to List</a>
+</div>
